@@ -106,7 +106,7 @@ module.exports = (env) => {
           patterns: [
             {
               from: path.resolve(__dirname, 'public'), 
-              to: path.resolve(__dirname, 'docs/public'), 
+              to: path.resolve(__dirname, 'docs/'), 
             },
           ],
         }),
