@@ -195,7 +195,7 @@ function SmallLayout(props: {
         height: 100%;
         display: flex;
         flex-direction: column;
-        justify-content: space-between;
+        justify-content: space-evenly;
       `}
     >
       <div

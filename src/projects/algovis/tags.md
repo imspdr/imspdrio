@@ -1,3 +1,5 @@
+### 1인 프로젝트 (2024.11 ~ )
+
 ### 배포 URL
 
 (https://imspdr.github.io/algovis/)
