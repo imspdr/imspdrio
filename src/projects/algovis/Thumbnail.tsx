@@ -7,7 +7,7 @@ export default function Thumbnail() {
         width: 100%;
         border-radius: 10px 10px 0px 0px;
       `}
-      src="/algovis/algovis.gif"
+      src="imspdrio/algovis/algovis.gif"
       alt="failed to load"
     />
   );
