@@ -47,7 +47,7 @@ export default function MainBoard() {
         position: relative;
         width: 100%;
         height: 100%;
-        overflow: ${open ? "hidden" : "auto"};
+        overflow: "auto";
       `}
     >
       {cards.map((card, index) => {
