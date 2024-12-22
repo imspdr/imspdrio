@@ -12,7 +12,7 @@ module.exports = (env) => {
       output: {
         path: path.join(__dirname, "docs"),
         filename: "main.js",
-        publicPath: "/",
+        publicPath: "/imspdrio",
       },
       resolve: {
         extensions: [".js", ".jsx", ".ts", ".tsx"],
@@ -69,7 +69,7 @@ module.exports = (env) => {
       },
       devServer: {
         historyApiFallback: {
-          index: "/"
+          index: "/imspdrio"
         },
         host: "localhost",
         port: 4545,
@@ -83,7 +83,7 @@ module.exports = (env) => {
       output: {
         path: path.join(__dirname, "docs"),
         filename: "main.js",
-        publicPath: "/",
+        publicPath: "/imspdrio",
       },
       resolve: {
         extensions: [".js", ".jsx", ".ts", ".tsx"],
@@ -106,7 +106,7 @@ module.exports = (env) => {
           patterns: [
             {
               from: path.resolve(__dirname, 'public'), 
-              to: path.resolve(__dirname, 'docs/public'), 
+              to: path.resolve(__dirname, 'docs/'), 
             },
           ],
         }),
