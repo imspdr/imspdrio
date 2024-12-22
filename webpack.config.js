@@ -105,8 +105,8 @@ module.exports = (env) => {
         new CopyWebpackPlugin({
           patterns: [
             {
-              from: path.resolve(__dirname, 'public'), // 복사할 폴더 경로
-              to: path.resolve(__dirname, 'docs/'), // 출력될 경로
+              from: path.resolve(__dirname, 'public'), 
+              to: path.resolve(__dirname, 'docs/public'), 
             },
           ],
         }),
