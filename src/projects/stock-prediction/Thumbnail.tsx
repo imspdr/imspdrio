@@ -7,7 +7,7 @@ export default function Thumbnail() {
         width: 100%;
         border-radius: 10px 10px 0px 0px;
       `}
-      src="imspdrio/stock-prediction/stock-prediction.gif"
+      src="/stock-prediction/stock-prediction.gif"
       alt="failed to load"
     />
   );
