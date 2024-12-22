@@ -1,0 +1,1 @@
+![thumbnail](/algovis/algovis.gif)
