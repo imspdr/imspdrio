@@ -1,5 +1,6 @@
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 const path = require("path");
 
 module.exports = (env) => {
@@ -101,6 +102,14 @@ module.exports = (env) => {
           filename: "404.html",
         }),
         new CleanWebpackPlugin(),
+        new CopyWebpackPlugin({
+          patterns: [
+            {
+              from: path.resolve(__dirname, 'public'), // 복사할 폴더 경로
+              to: path.resolve(__dirname, 'docs/'), // 출력될 경로
+            },
+          ],
+        }),
       ],
       module: {
         rules: [
