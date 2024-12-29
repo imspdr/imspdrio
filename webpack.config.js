@@ -146,8 +146,16 @@ module.exports = (env) => {
             ],
           },
           {
-            test: /\.(gif|png|jpe?g|ttf|mp3|ogg|wav|otf|woff|jpg|ico)$/,
+            test: /\.(gif|png|jpe?g|ttf|mp3|ogg|wav|otf|jpg|ico)$/,
             type: "asset/resource",
+          },
+          {
+            test: /\.(woff)$/,
+            type: "asset/resource",
+            generator: {
+              filename: "imspdrio[hash][ext]",
+              publicPath: "/imspdrio", // Prefix the font path
+            },
           },
         ],
       },
