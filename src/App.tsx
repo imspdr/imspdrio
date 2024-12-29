@@ -9,12 +9,18 @@ import MainBoard from "./MainBoard";
 import GitHubIcon from "@mui/icons-material/GitHub";
 
 const lightTheme = createTheme({
+  typography: {
+    fontFamily: "GmarketSansMedium",
+  },
   palette: {
     mode: "light",
   },
 });
 
 const darkTheme = createTheme({
+  typography: {
+    fontFamily: "GmarketSansMedium",
+  },
   palette: {
     mode: "dark",
   },
