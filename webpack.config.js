@@ -62,7 +62,7 @@ module.exports = (env) => {
             ],
           },
           {
-            test: /\.(gif|png|jpe?g|ttf|mp3|ogg|wav|otf|woff|jpg|ico)$/,
+            test: /\.(gif|png|jpe?g|ttf|mp3|ogg|wav|woff|otf|jpg|ico)$/,
             type: "asset/resource",
           },
         ],
@@ -105,7 +105,7 @@ module.exports = (env) => {
         new CopyWebpackPlugin({
           patterns: [
             {
-              from: path.resolve(__dirname, 'public'), 
+              from: path.resolve(__dirname, 'public/imspdrio'), 
               to: path.resolve(__dirname, 'docs/'), 
             },
           ],
@@ -148,7 +148,7 @@ module.exports = (env) => {
           {
             test: /\.(gif|png|jpe?g|ttf|mp3|ogg|wav|woff|otf|jpg|ico)$/,
             type: "asset/resource",
-          },
+          }
         ],
       },
     };
