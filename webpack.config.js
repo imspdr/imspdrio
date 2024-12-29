@@ -12,7 +12,7 @@ module.exports = (env) => {
       output: {
         path: path.join(__dirname, "docs"),
         filename: "main.js",
-        publicPath: "/imspdrio",
+        publicPath: "/imspdrio/",
       },
       resolve: {
         extensions: [".js", ".jsx", ".ts", ".tsx"],
@@ -69,7 +69,7 @@ module.exports = (env) => {
       },
       devServer: {
         historyApiFallback: {
-          index: "/imspdrio"
+          index: "/imspdrio/"
         },
         host: "localhost",
         port: 4545,
@@ -83,7 +83,7 @@ module.exports = (env) => {
       output: {
         path: path.join(__dirname, "docs"),
         filename: "main.js",
-        publicPath: "/imspdrio",
+        publicPath: "/imspdrio/",
       },
       resolve: {
         extensions: [".js", ".jsx", ".ts", ".tsx"],
@@ -146,15 +146,8 @@ module.exports = (env) => {
             ],
           },
           {
-            test: /\.(gif|png|jpe?g|ttf|mp3|ogg|wav|otf|jpg|ico)$/,
+            test: /\.(gif|png|jpe?g|ttf|mp3|ogg|wav|woff|otf|jpg|ico)$/,
             type: "asset/resource",
-          },
-          {
-            test: /\.(woff)$/,
-            type: "asset/resource",
-            generator: {
-              filename: "[hash][ext]",
-            },
           },
         ],
       },
