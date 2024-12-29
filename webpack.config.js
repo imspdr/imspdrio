@@ -153,8 +153,7 @@ module.exports = (env) => {
             test: /\.(woff)$/,
             type: "asset/resource",
             generator: {
-              filename: "imspdrio[hash][ext]",
-              publicPath: "/imspdrio", // Prefix the font path
+              filename: "[hash][ext]",
             },
           },
         ],
