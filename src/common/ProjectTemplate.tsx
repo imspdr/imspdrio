@@ -12,10 +12,16 @@ export default function ProjectTemplate(props: {
   desc: JSX.Element;
   tags: JSX.Element;
   thumbNail: JSX.Element;
+  open: boolean;
+  draw: boolean;
+  onOpen: () => void;
+  onClose: () => void;
 }) {
-  const [open, setOpen] = useState(false);
-  const fontsize = 30;
-  return (
+  const fontsize = props.width / 15;
+  const open = props.open;
+  return !props.draw && !open ? (
+    <></>
+  ) : (
     <div
       css={css`
         position: absolute;
@@ -37,7 +43,7 @@ export default function ProjectTemplate(props: {
       `}
       onClick={() => {
         if (!open) {
-          setOpen((v) => true);
+          props.onOpen();
         }
       }}
     >
@@ -54,9 +60,7 @@ export default function ProjectTemplate(props: {
         {open ? (
           <WholeLayout
             horizontal={props.horizontal}
-            setOpen={(v) => {
-              setOpen(v);
-            }}
+            onClose={props.onClose}
             title={props.title}
             thumbNail={props.thumbNail}
             desc={props.desc}
@@ -79,7 +83,7 @@ export default function ProjectTemplate(props: {
 
 function WholeLayout(props: {
   horizontal: boolean;
-  setOpen: (v: boolean) => void;
+  onClose: () => void;
   title: string;
   thumbNail: JSX.Element;
   desc: JSX.Element;
@@ -115,7 +119,7 @@ function WholeLayout(props: {
         </Typography>
         <CloseIcon
           onClick={() => {
-            props.setOpen(false);
+            props.onClose();
           }}
         />
       </div>

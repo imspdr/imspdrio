@@ -47,6 +47,7 @@ const cards = [
 
 export default function MainBoard() {
   const [width, setWidth] = useState(window.innerWidth);
+  const [selected, setSelected] = useState(-1);
   const resize = () => {
     setWidth(window.innerWidth);
   };
@@ -80,6 +81,10 @@ export default function MainBoard() {
             desc={card.desc}
             thumbNail={card.thumbnail}
             tags={card.tags}
+            open={selected === index}
+            draw={selected === -1}
+            onOpen={() => setSelected(index)}
+            onClose={() => setSelected(-1)}
           />
         );
       })}
