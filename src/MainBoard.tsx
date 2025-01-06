@@ -10,6 +10,14 @@ import StockDesc from "./projects/stock-prediction/ProjectDesc";
 import StockThumb from "./projects/stock-prediction/Thumbnail";
 import StockTags from "./projects/stock-prediction/ProjectTags";
 
+import CreditDesc from "./projects/credit-fraud/ProjectDesc";
+import CreditThumb from "./projects/credit-fraud/Thumbnail";
+import CreditTags from "./projects/credit-fraud/ProjectTags";
+
+import RainDesc from "./projects/rain-forecast/ProjectDesc";
+import RainThumb from "./projects/rain-forecast/Thumbnail";
+import RainTags from "./projects/rain-forecast/ProjectTags";
+
 const cards = [
   {
     title: "Algovis",
@@ -23,11 +31,22 @@ const cards = [
     tags: <StockTags />,
     thumbnail: <StockThumb />,
   },
+  {
+    title: "credit-card-fraud-detection",
+    desc: <CreditDesc />,
+    tags: <CreditTags />,
+    thumbnail: <CreditThumb />,
+  },
+  {
+    title: "rain-forecast-mlops",
+    desc: <RainDesc />,
+    tags: <RainTags />,
+    thumbnail: <RainThumb />,
+  },
 ];
 
 export default function MainBoard() {
   const [width, setWidth] = useState(window.innerWidth);
-  const [open, setOpen] = useState(false);
   const resize = () => {
     setWidth(window.innerWidth);
   };
@@ -53,9 +72,8 @@ export default function MainBoard() {
       {cards.map((card, index) => {
         return (
           <ProjectTemplate
-            setOpen={setOpen}
             horizontal={width > 800}
-            top={Math.floor(index / nGrid) * (cardWidth * 0.8 + gap)}
+            top={Math.floor(index / nGrid) * (cardWidth * 0.8 + gap / 2)}
             left={width / 2 + ((index % nGrid) - nGrid / 2) * (cardWidth + gap / 2)}
             width={cardWidth}
             title={card.title}

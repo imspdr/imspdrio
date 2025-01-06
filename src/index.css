@@ -31,9 +31,9 @@ body {
 
 *::-webkit-scrollbar,
 *::-webkit-scrollbar-thumb {
-  width: 8px !important;
-  height: 8px;
-  border-radius: 4px !important;
+  width: 4px !important;
+  height: 4px;
+  border-radius: 2px !important;
   margin: 0 !important;
   color: var(--scrollColor) !important;
 }

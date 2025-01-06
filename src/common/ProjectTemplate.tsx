@@ -12,7 +12,6 @@ export default function ProjectTemplate(props: {
   desc: JSX.Element;
   tags: JSX.Element;
   thumbNail: JSX.Element;
-  setOpen: (v: boolean) => void;
 }) {
   const [open, setOpen] = useState(false);
   const fontsize = 30;
@@ -38,7 +37,6 @@ export default function ProjectTemplate(props: {
       `}
       onClick={() => {
         if (!open) {
-          props.setOpen(true);
           setOpen((v) => true);
         }
       }}
@@ -58,7 +56,6 @@ export default function ProjectTemplate(props: {
             horizontal={props.horizontal}
             setOpen={(v) => {
               setOpen(v);
-              props.setOpen(v);
             }}
             title={props.title}
             thumbNail={props.thumbNail}
@@ -195,19 +192,20 @@ function SmallLayout(props: {
         height: 100%;
         display: flex;
         flex-direction: column;
-        justify-content: space-evenly;
       `}
     >
       <div
         css={css`
           width: 100%;
+          height: 80%;
         `}
       >
         {props.thumbNail}
       </div>
       <div
         css={css`
-          width: 100$;
+          width: 100%;
+          height: 20%;
           padding: 0px 10px;
           min-height: 48px;
           display: flex;
