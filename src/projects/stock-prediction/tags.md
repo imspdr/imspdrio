@@ -1,9 +1,5 @@
 ### 1인 프로젝트 (2024.11 ~ 2024.12)
 
-### 배포 URL
-
-(http://49.50.175.188:4545/)
-
 ### GitHub Repository
 
 (https://github.com/imspdr/stock-prediction)
