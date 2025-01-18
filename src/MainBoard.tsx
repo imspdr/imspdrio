@@ -18,15 +18,25 @@ import RainDesc from "./projects/rain-forecast/ProjectDesc";
 import RainThumb from "./projects/rain-forecast/Thumbnail";
 import RainTags from "./projects/rain-forecast/ProjectTags";
 
+import MovieDesc from "./projects/movie-rec/ProjectDesc";
+import MovieThumb from "./projects/movie-rec/Thumbnail";
+import MovieTags from "./projects/movie-rec/ProjectTags";
+
 const cards = [
   {
-    title: "Algovis",
+    title: "movie-rec",
+    desc: <MovieDesc />,
+    tags: <MovieTags />,
+    thumbnail: <MovieThumb />,
+  },
+  {
+    title: "algovis",
     desc: <AlgoDesc />,
     tags: <AlgoTags />,
     thumbnail: <AlgoThumb />,
   },
   {
-    title: "Stock-prediction",
+    title: "stock-prediction",
     desc: <StockDesc />,
     tags: <StockTags />,
     thumbnail: <StockThumb />,

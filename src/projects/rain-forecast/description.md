@@ -1,8 +1,8 @@
-# Structure
+## Structure
 
 ![Structure](rain-forecast/rain_structure.png)
 
-# Description
+## Description
 
 기상청 오픈 API에서 제공하는 날씨 관련 측정 데이터를 이용한 강수 여부 예측 모델 관리 시스템이다.
 
@@ -11,7 +11,7 @@
 기상청 API로부터 지정한 날짜 구간의 데이터를 받아 학습시켜 새로운 모델을 생성하고 관리하는 기능과,
 생성된 모델을 이용해 지정한 날짜에 대한 추론 결과를 반환할 수 있도록 배포할 수 있는 기능을 제공한다.
 
-# Install
+## Install
 
 ```commandline
 $ cd helm
@@ -33,7 +33,7 @@ $ helm upgrade --install rain-forecast-mlops rain-forecast-mlops
   - 이미지는 각 폴더의 build_push.sh script를 이용해 저장한다.
 - istio, minikube 버전에 따른 ip, port 그리고 namespace, 자원 설정 정보 등은 helm/rain-forecast-mlops/values.yaml에서 수정할 수 있다.
 
-# Example
+## Example
 
 ![학습 관리](rain-forecast/rain_train_list.png)
 ![학습 생성](rain-forecast/rain_train_create.png)
@@ -42,7 +42,7 @@ $ helm upgrade --install rain-forecast-mlops rain-forecast-mlops
 ![추론 1](rain-forecast/rain_infer.png)
 ![추론 2](rain-forecast/rain_infer2.png)
 
-# Backend
+## Backend
 
 백엔드 서버는 FastAPI를 이용해 간단한 train job CRUD, kserve trainedmodels 생성 / 삭제 기능 등을 구현했다.
 
@@ -64,7 +64,7 @@ predictor.pkl을 다시 rb로 열어 전송하는 방식이었는데, wb로 열�
 
 그 외에도 kserve에 제출된 trainedmodel이 모델을 다운로드 받아갈 수 있도록 모델 다운로드 api 등을 구현했다.
 
-# Frontend
+## Frontend
 
 프론트엔드는 React typescript로 작성했으며, nginx 서버를 이용해 백엔드 서버와 Istio 서버에 각각 연결할 수 있도록 프록시를 구축했다.
 
@@ -76,7 +76,7 @@ Kserve의 inference service를 이용할 때는 host 값에 namespace정보가 �
 이 namespace값을 pod env 변수로 받아서 넘겨주고 싶었는데, pod의 image는 nginx기 때문에 이미 프론트의 관련 파일은 빌드되어 main.js로 작성된 상태였다.
 생각해보니 main.js도 어떻게 보면 텍스트 파일이어서 코드상에서 namespace값을 TOENVNAMESPACE와 같이 작성해놓고, docker entrypoint에서 단순히 string replace작업을 진행하도록 하여 구현했다.
 
-# Model
+## Model
 
 모델은 각 시간의 기상 정보를 이용해서 다음 1시간의 강수 여부를 판단하는 classifier 모델을 설계했다.
 
@@ -97,7 +97,7 @@ Inferenceservice crd는 기본적으로 생성시 사용할 image를 입력값�
 multi model server의 경우 이를 해결하기 위해 모델 파일을 갖고 있지않은 image를 사용해 inference service를 생성한 후에
 trained model이라는 crd가 제출될 때마다 이를 감지하여 trainedmodel에 작성된 url을 통해 모델 파일을 다운로드하여 서빙하는 방식이다.
 
-# Future Work
+## Future Work
 
 - FastAPI의 경우 이번 프로젝트를 통해 처음 다루어봤기도하고,
   프로젝트 개발 기간이 길지 않아 백엔드가 굉장히 미니멀하게 구현됐다.
