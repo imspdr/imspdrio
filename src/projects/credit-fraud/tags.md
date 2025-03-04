@@ -1,8 +1,8 @@
 ### 1인 프로젝트 (2024.10 ~ 2024.11)
 
-### GitHub Repository
+### 🔗 Links
 
-(https://github.com/imspdr/credit-card-fraud-detection)
+[![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/imspdr/credit-card-fraud-detection)
 
 ### 기술 스택
 

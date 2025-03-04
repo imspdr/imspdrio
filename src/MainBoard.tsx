@@ -22,7 +22,23 @@ import MovieDesc from "./projects/movie-rec/ProjectDesc";
 import MovieThumb from "./projects/movie-rec/Thumbnail";
 import MovieTags from "./projects/movie-rec/ProjectTags";
 
+import RecruitDesc from "./projects/recruit/ProjectDesc";
+import RecruitThumb from "./projects/recruit/Thumbnail";
+import RecruitTags from "./projects/recruit/ProjectTags";
+
 const cards = [
+  {
+    title: "recruit",
+    desc: <RecruitDesc />,
+    tags: <RecruitTags />,
+    thumbnail: <RecruitThumb />,
+  },
+  {
+    title: "stock-prediction",
+    desc: <StockDesc />,
+    tags: <StockTags />,
+    thumbnail: <StockThumb />,
+  },
   {
     title: "movie-rec",
     desc: <MovieDesc />,
@@ -34,12 +50,6 @@ const cards = [
     desc: <AlgoDesc />,
     tags: <AlgoTags />,
     thumbnail: <AlgoThumb />,
-  },
-  {
-    title: "stock-prediction",
-    desc: <StockDesc />,
-    tags: <StockTags />,
-    thumbnail: <StockThumb />,
   },
   {
     title: "credit-card-fraud-detection",

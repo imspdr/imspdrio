@@ -1,12 +1,8 @@
 ### 1인 프로젝트 (2025.01)
 
-### 배포 URL
+### 🔗 Links
 
-(http://110.165.16.140:4546/)
-
-### GitHub Repository
-
-(https://github.com/imspdr/movie-rec)
+[![Website](https://img.shields.io/badge/Website-000000?style=for-the-badge&logo=google-chrome&logoColor=white)](http://110.165.16.140:4546/) [![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/imspdr/movie-rec)
 
 ### 기술 스택
 
