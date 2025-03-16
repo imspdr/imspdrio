@@ -26,7 +26,17 @@ import RecruitDesc from "./projects/recruit/ProjectDesc";
 import RecruitThumb from "./projects/recruit/Thumbnail";
 import RecruitTags from "./projects/recruit/ProjectTags";
 
+import Kospi200Desc from "./projects/kospi200/ProjectDesc";
+import Kospi200Thumb from "./projects/kospi200/Thumbnail";
+import Kospi200Tags from "./projects/kospi200/ProjectTags";
+
 const cards = [
+  {
+    title: "kospi200",
+    desc: <Kospi200Desc />,
+    tags: <Kospi200Tags />,
+    thumbnail: <Kospi200Thumb />,
+  },
   {
     title: "recruit",
     desc: <RecruitDesc />,
@@ -34,16 +44,16 @@ const cards = [
     thumbnail: <RecruitThumb />,
   },
   {
-    title: "stock-prediction",
-    desc: <StockDesc />,
-    tags: <StockTags />,
-    thumbnail: <StockThumb />,
-  },
-  {
     title: "movie-rec",
     desc: <MovieDesc />,
     tags: <MovieTags />,
     thumbnail: <MovieThumb />,
+  },
+  {
+    title: "stock-prediction",
+    desc: <StockDesc />,
+    tags: <StockTags />,
+    thumbnail: <StockThumb />,
   },
   {
     title: "algovis",
